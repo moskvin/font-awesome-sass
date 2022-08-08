@@ -58,3 +58,11 @@
     clip: auto;
   }
 }
+
+// Reference for workaround https://github.com/FortAwesome/Font-Awesome/issues/17644
+@function fa-content($fa-var){
+  @return unquote("\"") + unquote(str-insert($fa-var, "\\", 1)) + unquote("\"");
+}
+
+/* _variables.scss */
+$fa-var-500px: f26e;
